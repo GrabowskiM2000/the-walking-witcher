@@ -1,0 +1,12 @@
+.container{
+  background: url(../../../assets/images/witcher-horse-background.jpg);
+  background-size:cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 1420px;
+  .box{
+    margin: 0 auto;
+    max-width: 1100px;
+    // background-color: rgba(0,0,0, 0.7);
+  }
+}

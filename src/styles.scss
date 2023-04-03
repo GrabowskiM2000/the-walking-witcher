@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+// RESET //
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: "Semplicita Pro",'Open Sans',Arial,Helvetica,sans-serif;
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  -webkit-user-drag: none ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.global-upper-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0,0,0, .5);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 1rem;
+
+  h2{
+    margin-bottom: 1rem;
+  }
+  p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
