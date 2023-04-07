@@ -11,6 +11,8 @@ import { CharacterComponent } from './pages/character/character.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { InstructionComponent } from './pages/instruction/instruction.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CharacterComponent,
     LocationsComponent,
     InstructionComponent,
+    CardComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

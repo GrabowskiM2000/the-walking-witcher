@@ -25,22 +25,26 @@ a{
   box-sizing: border-box;
 }
 
-.global-upper-box{
+.global-content-box{
   display: flex;
   align-items: center;
   flex-direction: column;
   color: white;
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(0,0,0, .7);
   border-radius: 1rem;
   padding: 2rem;
-  width: 100%;
+  width: 96%;
   margin: 0 1rem;
 
   h2{
     margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
   }
   p{
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
   }
 }
