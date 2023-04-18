@@ -36,8 +36,4 @@ export class AppNavComponent implements OnInit {
       this.ref.detectChanges();
     }
   }
-
-  // public crossClick(): void {
-  //   this.mobileVisible = false;
-  // }
 }

@@ -1,0 +1,58 @@
+<div class="environment-row">
+  <div class="monster-gallery-box flex-center">
+    <img [src]="image">
+  </div>
+  <div class="monster-gallery-box flex-center" *ngFor="let i = index of monstersByLvl">
+    <div class="monster-dots-box" *ngIf="monstersByLvl[i].length > 1">
+      <div class="monster-dots" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'big-dot': monster === monstersByLvl[i][monstersByLvlIndex[i]]}"></div>
+    </div>
+
+    <img class="info-icon" src="assets/icons/info.png" (click)="infoIconClick(i)">
+    
+    <div class="monster-gallery" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'hide-if-empty': monster !== monstersByLvl[i][monstersByLvlIndex[i]]}" (click)="nextMonster(i)">
+      <img [src]="monster.img" *ngIf="monster === monstersByLvl[i][monstersByLvlIndex[i]]">
+      <p>{{monster.name}}</p>
+    </div>
+  </div>
+  
+  <div class="monster-modal" *ngIf="monsterModalVisible">
+
+    <img class="monster-modal-close-icon" src="assets/icons/close.png" (click)="closeModal()">
+
+    <div class="flex-center-column">
+
+      <h2 class="monster-modal-name monster-modal-box">{{modalMonster.name}}</h2>
+
+      <img class="monster-modal-image monster-modal-box" [src]="modalMonster.img">
+
+    </div>
+
+    <div class="flex-center-column">
+
+      <div class="flex-center monster-modal-stats monster-modal-box">
+
+        <div class="flex-center-column monster-modal-stats-left">
+          <h4 class="monster-modal-text">Poziom: {{modalMonster.lvl}}</h4>
+          <h4 class="monster-modal-text">Występowanie: {{modalMonster.terrain}}</h4>
+          <h4 class="monster-modal-text">Zakres płacy: {{modalMonster.money}}</h4>
+          <h4 class="monster-modal-text">Składniki: {{modalMonster.drop}}</h4>
+          <h4 class="monster-modal-text">Umiejętności: {{modalMonster.skills}}</h4>
+        </div>
+
+        <div class="flex-center-column monster-modal-stats-right">
+          <h5 class="monster-modal-text">Życie: {{modalMonster.health}}</h5>
+          <h5 class="monster-modal-text">Obrażenia: {{modalMonster.dmg}}</h5>
+          <h5 class="monster-modal-text">Pancerz: {{modalMonster.armor}}</h5>
+          <h5 class="monster-modal-text">Szczęście: {{modalMonster.luck}}</h5>
+          <h5 class="monster-modal-text">Szybkość: {{modalMonster.speed}}</h5>
+        </div>
+
+      </div>
+
+      <div class="flex-center-column monster-modal-box">
+        <h4 class="monster-modal-description text-aligin-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ut, quibusdam quas reiciendis neque illum architecto deleniti temporibus, animi ducimus? Officia praesentium qui placeat inventore non amet et maiores!</h4>
+      </div>
+
+    </div>
+  </div>
+</div>

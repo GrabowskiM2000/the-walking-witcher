@@ -25,6 +25,13 @@ a{
   box-sizing: border-box;
 }
 
+.content-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .global-content-box{
   display: flex;
   align-items: center;
@@ -34,7 +41,7 @@ a{
   border-radius: 1rem;
   padding: 2rem;
   width: 96%;
-  margin: 0 1rem;
+  margin-bottom: 2rem;
 
   h2{
     margin-bottom: 1rem;
@@ -46,5 +53,47 @@ a{
     margin-bottom: 1rem;
     width: 100%;
     text-align: center;
+  }
+}
+.w-100{
+  width: 100%;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-aligin-left{
+  text-align: left;
+}
+
+.text-aligin-right{
+  text-align: right;
+}
+
+.text-aligin-center{
+  text-align: center;
+}
+
+@media screen and (max-width: 580px) {
+  .content-container{
+    .global-content-box{
+      padding: 1rem;
+    }
   }
 }

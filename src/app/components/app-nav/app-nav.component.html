@@ -2,9 +2,10 @@
 
   <div class="container-box desktop">
     <a routerLink="" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }">strona główna</a>
-    <a routerLink="bestiary" routerLinkActive="active">potwory</a>
+    <a routerLink="board" routerLinkActive="active">tablica</a>
     <a routerLink="character" routerLinkActive="active">postać</a>
     <a routerLink="lacations" routerLinkActive="active">lokacje</a>
+    <a routerLink="bestiary" routerLinkActive="active">bestiariusz</a>
     <a routerLink="instruction" routerLinkActive="active">instrukcja</a>
   </div>
 
@@ -14,10 +15,11 @@
 
   <div class="mobile-menu" *ngIf="mobileVisible">
     <a routerLink="" routerLinkActive="active" (click)="mobileLinkClick()"  [routerLinkActiveOptions]="{ exact: true }">strona główna</a>
-    <a routerLink="bestiary" routerLinkActive="active" (click)="mobileLinkClick()">potwory</a>
+    <a routerLink="board" routerLinkActive="active" (click)="mobileLinkClick()">tablica</a>
     <a routerLink="character" routerLinkActive="active" (click)="mobileLinkClick()">postać</a>
     <a routerLink="lacations" routerLinkActive="active" (click)="mobileLinkClick()">lokacje</a>
-    <a routerLink="instruction" routerLinkActive="active" (click)="mobileLinkClick()" >instrukcja</a>
+    <a routerLink="bestiary" routerLinkActive="active" (click)="mobileLinkClick()">bestiariusz</a>
+    <a routerLink="instruction" routerLinkActive="active" (click)="mobileLinkClick()">instrukcja</a>
   </div>
 
 </div>

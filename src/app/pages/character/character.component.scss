@@ -1,0 +1,17 @@
+.character-box{
+  position: relative;
+  height: 700px;
+
+  .character-name{
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+  }
+
+  .character-background-image{
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+  }
+}

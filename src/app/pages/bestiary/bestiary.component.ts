@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bestiary',
@@ -9,10 +9,4 @@ export class BestiaryComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  @Input() shuffled = [];
-
-  public reset(): void {
-    // this.shuffled = [false, false, false];
-  }
 }
