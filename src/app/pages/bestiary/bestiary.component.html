@@ -1,31 +1,34 @@
-<div class="container">
-  <div class="global-upper-box">
-    <h2>Tablica ogłoszeniowa</h2>
-    <p>Sprawdź czy jest jakieś zlecenie na tablicy ogłoszeniowej...</p>
-    <div class="shuffle-button">Losuj !</div>
-    <div class="monster-cards">
-      <div class="card">
-        <img src="assets/images/bronze-card.png" alt="">
-        <div class="card-content">
-          <p>?</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/bronze-card.png" alt="">
-        <div class="card-content">
-          <p>?</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/bronze-card.png" alt="">
-        <div class="card-content">
-          <p>?</p>
-        </div>
-      </div>
+<div class="content-container">
+  <div class="global-content-box">
+    <h2>Bestiariusz</h2>
+    <p>Tutaj znajdziesz listę wszystkich potworów oraz ich statystyki</p>
+  </div>
+  <div class="global-content-box">
+    <div class="level-row">
+      <p>text</p>
+      <p>Lvl 1</p>
+      <p>Lvl 2</p>
+      <p>Lvl 3</p>
+      <p>Lvl 4</p>
+      <p>Lvl 5</p>
     </div>
-
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Lasy'" [image]="'assets/icons/forest.png'"></app-bestiary-monster>
+    </div>
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Polany'" [image]="'assets/icons/grass.png'"></app-bestiary-monster>
+    </div>
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Zaludnione'" [image]="'assets/icons/hut.png'"></app-bestiary-monster>
+    </div>
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Obszary podmokłe'" [image]="'assets/icons/drop.png'"></app-bestiary-monster>
+    </div>
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Obszary wysokie'" [image]="'assets/icons/mountain.png'"></app-bestiary-monster>
+    </div>
+    <div class="w-100">
+      <app-bestiary-monster [enviroment]="'Ruiny'" [image]="'assets/icons/ruin.png'"></app-bestiary-monster>
+    </div>
   </div>
 </div>
-
-
-

@@ -1,0 +1,55 @@
+      <div class="card" [ngClass]="{'card-flip': shuffled}" (click)="shuffleClick(0)">
+        <div class="card-front">
+          <img class="card-border" src="assets/images/bronze-card.png" alt="">
+          <div class="card-content">
+            <p>?</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <img class="card-border" src="assets/images/bronze-card.png" alt="">
+          <img class="monster-image" [src]="currentMonsters[0].img" alt="">
+          <h3>{{currentMonsters[0].name}}</h3>
+          <div class="card-back-money single-stat">
+            <img class="card-back-icon" src="assets/icons/coin.png">
+            <p>{{currentMonsters[0].money}}</p>
+          </div>
+          <div class="place">
+            <div class="single-stat">
+              <img class="card-back-icon" src="assets/icons/place.png">
+              <p>Miejsce długa nazwa</p>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stats-left">
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/star.png">
+                <p>{{currentMonsters[0].lvl}}</p>
+              </div>
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/sword.png">
+                <p>{{currentMonsters[0].dmg}}</p>
+              </div>
+            </div>
+            <div class="stats-center">
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/heart.png">
+                <p>{{currentMonsters[0].health}}</p>
+              </div>
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/wind.png">
+                <p>{{currentMonsters[0].speed}}</p>
+              </div>
+            </div>
+            <div class="stats-right">
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/shield.png">
+                <p>{{currentMonsters[0].armor}}</p>
+              </div>
+              <div class="single-stat">
+                <img class="card-back-icon" src="assets/icons/clover.png">
+                <p>{{currentMonsters[0].luck}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
