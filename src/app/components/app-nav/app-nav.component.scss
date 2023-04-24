@@ -85,6 +85,11 @@ a:hover::before{
 //------------------MEDIA---QUERIES----------------------------------
 
 @media screen and (max-width: 620px){
+
+  .container{
+    padding: 10px 0;
+  }
+
   .burger {
     display: block;
   }
