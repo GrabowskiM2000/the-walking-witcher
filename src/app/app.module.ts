@@ -15,6 +15,7 @@ import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BoardComponent } from './pages/board/board.component';
 import { BestiaryMonsterComponent } from './components/bestiary-monster/bestiary-monster.component';
+import { LocationsEnviromentComponent } from './components/locations-enviroment/locations-enviroment.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BestiaryMonsterComponent } from './components/bestiary-monster/bestiary
     FooterComponent,
     BoardComponent,
     BestiaryMonsterComponent,
+    LocationsEnviromentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

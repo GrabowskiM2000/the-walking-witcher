@@ -7,54 +7,9 @@
   &-box{
   display: flex;
   justify-content: space-around;
-    &-enviroment{
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      position: relative;
-      background-color: rgba($color: #fff, $alpha: .1);
-      margin: 1rem;
-      border-radius: 8px;
+    app-locations-enviroment{
       width: 100%;
       max-width: 25rem;
-      max-height: 33rem;
-      overflow-y: scroll;
-      &::-webkit-scrollbar{
-        display: none;
-      }
-      &-title{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        left: 50%;
-        background-color: rgb(75, 75, 75);
-        min-height: 50px;
-        z-index: 20;
-        h3{
-          font-size: 1.6rem;
-        }
-        img{
-          max-width: 16px;
-          max-height: 16px;
-        }
-        &-plus{
-          cursor: pointer;
-          transition: .2s ease;
-          &:hover{
-            scale: 1.1;
-          }
-        }
-      }
-      ul{
-        list-style: none;
-        padding: 1rem 1rem 0 1rem;
-        li{
-          z-index: 10;
-          margin-bottom: 2rem;
-        }
-      }
     }
   }
 }
@@ -66,18 +21,6 @@
     &-box{
     flex-direction: column;
     width: 100%;
-      &-enviroment{
-        max-height: 28rem;
-        &-title{
-          h3{
-            font-size: 1rem;
-          }
-          img{
-            max-width: 14px;
-            max-height: 14px;
-          }
-        }
-      }
     }
   } 
 }
@@ -86,22 +29,9 @@
   .locations{
     flex-direction: column;
     &-box{
-    align-items: center;
-      &-enviroment{
-        max-height: 17.3rem;
-        &-title{
-          min-height: 2.5rem;
-          img{
-            max-width: 14px;
-            max-height: 14px;
-          }
-        }
-        ul{
-          li{
-            font-size: 1.6rem;
-            margin-bottom: .5rem;
-          }
-        }
+      align-items: center;
+      app-locations-enviroment{
+        max-width: unset;
       }
     }
   } 
