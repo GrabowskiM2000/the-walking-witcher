@@ -18,6 +18,7 @@ export class CardComponent implements OnInit {
   public monsterLvl = [0, 0, 0];
   public currentMonsters: IMonster[] = [];
   public shuffled = false;
+  public monsterMoney = 0;
 
   constructor(private ref: ChangeDetectorRef) {}
 
@@ -57,6 +58,13 @@ export class CardComponent implements OnInit {
       this.currentMonsters[el] =
         monstersByLvl[Math.floor(Math.random() * monstersByLvl.length)];
       console.log(this.currentMonsters[el].img);
+      this.monsterMoney =
+        this.currentMonsters[el].moneyMin +
+        Math.floor(
+          Math.random() *
+            (this.currentMonsters[el].moneyMax -
+              this.currentMonsters[el].moneyMin)
+        );
     }
     this.shuffled = true;
     console.log(this.shuffled);
