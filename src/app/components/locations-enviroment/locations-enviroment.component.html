@@ -2,7 +2,11 @@
   <div class="locations-enviroment-title">
     <img [src]="image">
     <h3>{{enviroment}}</h3>
-    <img class="locations-enviroment-title-plus" src="assets/icons/plus.png" (click)="addLocation()">
+    <div class="locations-enviroment-title-icons">
+      <img src="assets/icons/plus.png" (click)="addLocation()">
+      <img src="assets/icons/edit.png">
+      <img src="assets/icons/trash.png">
+    </div>
   </div>
   <ul>
     <li *ngFor="let i = index, let place of TESTMIEJSCA">{{i+1}}. {{place}}</li>

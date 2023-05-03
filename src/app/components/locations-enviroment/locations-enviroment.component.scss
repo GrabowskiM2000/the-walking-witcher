@@ -3,7 +3,7 @@
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  background-color: rgba($color: #fff, $alpha: .1);
+  background-color: rgba(#0A6683, 0.3);
   margin: 1rem;
   border-radius: 8px;
   max-height: 33rem;
@@ -18,7 +18,7 @@
     position: sticky;
     top: 0;
     left: 50%;
-    background-color: rgb(75, 75, 75);
+    background-color: var(--ocean-blue-dark);
     min-height: 50px;
     h3{
       font-size: 1.6rem;
@@ -27,12 +27,18 @@
       max-width: 16px;
       max-height: 16px;
     }
-    &-plus{
-      cursor: pointer;
-      position: relative; 
-      transition: .2s ease;
-      &:hover{
-        scale: 1.1;
+    &-icons{
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      max-width: 8rem;
+      img{
+        cursor: pointer;
+        position: relative; 
+        transition: .2s ease;
+        &:hover{
+          scale: 1.1;
+        }
       }
     }
   }
@@ -48,7 +54,7 @@
 }
 
 @keyframes modal-appears {
-  from {top: -160px}
+  from {top: -350px}
   to {top: 0;}
 }
 
@@ -58,7 +64,7 @@
 
 @keyframes modal-hides {
   from {top: 0}
-  to {top: -160px}
+  to {top: -350px}
 }
 
 .modal-hides-animation{
@@ -73,7 +79,7 @@
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  top: -160px;
+  top: -350px;
   left: 0;
   z-index: 30;
   border-radius: 8px;
@@ -101,7 +107,6 @@
       height: 16px;
       cursor: pointer;
       transition: .2s ease-in-out;
-      // background-color: white;
       &:hover{
         scale: 1.1;
       }

@@ -8,7 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LocationsEnviromentComponent implements OnInit {
   @Input() enviroment: string = '';
   @Input() image: string = '';
-  public TESTMIEJSCA = ['Jakieś miejsce asdasd', 'Inne miejsce'];
+  public TESTMIEJSCA = [
+    'Jakieś miejsce asdasd',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+    'Inne miejsce',
+  ];
   public addModalVisible: boolean = false;
   public addModalHides: boolean = false;
 
