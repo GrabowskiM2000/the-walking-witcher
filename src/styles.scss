@@ -1,3 +1,7 @@
+// IMPORT //
+@import url(assets/styles/colors.scss);
+@import url(assets/styles/fonts.scss);
+
 // RESET //
 html{
   font-size: 10px;
@@ -14,7 +18,7 @@ body::-webkit-scrollbar{
 }
 
 a{
-  color: black;
+  color: var(--black);
   text-decoration: none;
   -webkit-user-drag: none ;
 }
@@ -37,7 +41,7 @@ a{
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: var(--white);
   background-color: rgba(0,0,0, .7);
   border-radius: 1rem;
   padding: 2rem;
