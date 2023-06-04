@@ -1,6 +1,18 @@
+// TEST //
+
+.test{
+  background-color: red !important;
+  min-height: 1000px !important;
+}
+
 // IMPORT //
 @import url(assets/styles/colors.scss);
 @import url(assets/styles/fonts.scss);
+
+@font-face {
+  font-family: 'Vampire';
+  src: url('../src/assets/fonts/Vampire Wars.ttf');
+}
 
 // RESET //
 html{

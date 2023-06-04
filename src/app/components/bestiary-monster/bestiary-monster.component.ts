@@ -139,7 +139,7 @@ export class BestiaryMonsterComponent implements OnInit {
     }
   }
 
-  public infoIconClick(i: number): void {
+  public showMonsterInfo(i: number): void {
     this.monsterModalVisible = true;
     this.modalMonster = this.monstersByLvl[i][this.monstersByLvlIndex[i]];
     this.fight(this.modalMonster);
