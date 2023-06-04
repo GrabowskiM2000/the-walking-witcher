@@ -1,0 +1,22 @@
+<div class="content-container">
+  <div class="global-content-box">
+    <h2>Tracker</h2>
+    <p>Lista twoich celów i stopień ich spełnienia. Za ich pomocą rozwijasz swoje statystyki</p>
+  </div>
+  <div class="global-content-box">
+    <ul>
+      <li *ngFor="let i = index, let habit of TEST">
+        <div class="name">
+          <h4>{{habit.name}}</h4>
+        </div>
+        <div class="progress">
+          <p class="progress-current">{{habit.progress}} / {{habit.toUpgrade}}</p>
+        </div>
+        <div class="buttons">
+          <div class="back" *ngIf="isDone[i]" (click)="habitStatusChange(i)"></div>
+          <div class="done" *ngIf="!isDone[i]"  (click)="habitStatusChange(i)"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

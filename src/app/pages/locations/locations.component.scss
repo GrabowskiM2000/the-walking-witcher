@@ -1,0 +1,37 @@
+.locations{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  &-box{
+  display: flex;
+  justify-content: space-around;
+    app-locations-enviroment{
+      width: 100%;
+      max-width: 25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .locations{
+    flex-direction: row;
+    align-items: flex-start;
+    &-box{
+    flex-direction: column;
+    width: 100%;
+    }
+  } 
+}
+
+@media screen and (max-width: 570px) {
+  .locations{
+    flex-direction: column;
+    &-box{
+      align-items: center;
+      app-locations-enviroment{
+        max-width: unset;
+      }
+    }
+  } 
+}

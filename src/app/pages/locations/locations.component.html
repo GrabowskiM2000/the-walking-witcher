@@ -1,1 +1,24 @@
-<p>locations works!</p>
+<div class="content-container">
+  <div class="global-content-box">
+    <h2>Lokacje</h2>
+    <p>Sprawdź istniejące lokacje lub dodaj nowe. Potrzebujesz pewną ilość lokacji na początku rozgrywki żeby mieć możliwość losowania zgłoszeń
+    </p>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="global-content-box">
+    <div class="locations">
+      <div class="locations-box">
+        <app-locations-enviroment [enviroment]="'Lasy'" [image]="'assets/icons/forest.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="'Polany'" [image]="'assets/icons/grass.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="'Zaludnione'" [image]="'assets/icons/hut.png'"></app-locations-enviroment>
+      </div>
+      <div class="locations-box">
+        <app-locations-enviroment [enviroment]="'Bagna'" [image]="'assets/icons/drop.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="'Wyżyny'" [image]="'assets/icons/mountain.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="'Ruiny'" [image]="'assets/icons/ruin.png'"></app-locations-enviroment>
+      </div>
+    </div>
+  </div>
+</div>

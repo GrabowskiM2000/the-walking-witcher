@@ -1,0 +1,18 @@
+<div class="locations-enviroment" [ngClass]="{'scroll-disable': addModalVisible}">
+  <div class="locations-enviroment-title">
+    <img [src]="image">
+    <h3>{{enviroment}}</h3>
+    <img src="assets/icons/plus.png" (click)="addLocation()">
+  </div>
+  <ul>
+    <li *ngFor="let i = index, let place of TESTMIEJSCA">{{i+1}}. {{place}}</li>
+  </ul>
+  <div class="locations-enviroment-add-modal"
+  [ngClass]="{'modal-appears-animation': addModalVisible, 'modal-hides-animation': addModalHides }">
+    <img class="locations-enviroment-add-modal-close" src="assets/icons/close.png" (click)="addLocationClose()">
+    <div class="locations-enviroment-add-modal-input-box">
+      <input type="text" placeholder="Wpisz nazwę nowej lokacji...">
+      <img src="assets/icons/black-plus.png" class="locations-enviroment-add-modal-input-box-confirm">
+    </div>
+  </div>
+</div>

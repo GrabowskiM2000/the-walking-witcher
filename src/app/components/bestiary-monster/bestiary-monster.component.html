@@ -7,9 +7,10 @@
       <div class="monster-dots" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'big-dot': monster === monstersByLvl[i][monstersByLvlIndex[i]]}"></div>
     </div>
 
-    <img class="info-icon" src="assets/icons/info.png" (click)="infoIconClick(i)">
+    <img class="info-icon" src="assets/icons/angle-right.png" (click)="nextMonster(i)" *ngIf="monstersByLvl[i].length > 1">
     
-    <div class="monster-gallery" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'hide-if-empty': monster !== monstersByLvl[i][monstersByLvlIndex[i]]}" (click)="nextMonster(i)">
+    <div class="monster-gallery" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'hide-if-empty': monster !== monstersByLvl[i][monstersByLvlIndex[i]]}"
+    (click)="showMonsterInfo(i)">
       <img [src]="monster.img" *ngIf="monster === monstersByLvl[i][monstersByLvlIndex[i]]">
       <p>{{monster.name}}</p>
     </div>
@@ -34,7 +35,7 @@
         <div class="flex-center-column monster-modal-stats-left">
           <h4 class="monster-modal-text">Poziom: {{modalMonster.lvl}}</h4>
           <h4 class="monster-modal-text">Występowanie: {{modalMonster.terrain}}</h4>
-          <h4 class="monster-modal-text">Zakres płacy: {{modalMonster.money}}</h4>
+          <h4 class="monster-modal-text">Zakres płacy: {{modalMonster.moneyMin}} - {{modalMonster.moneyMax}}</h4>
           <h4 class="monster-modal-text">Składniki: {{modalMonster.drop}}</h4>
           <h4 class="monster-modal-text">Umiejętności: {{modalMonsterSkills}}</h4>
         </div>

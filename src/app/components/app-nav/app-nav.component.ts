@@ -5,6 +5,7 @@ import {
   HostListener,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -14,14 +15,26 @@ import {
 })
 export class AppNavComponent implements OnInit {
   public mobileVisible: boolean = false;
+  public mobileCloseAnimation: boolean = false;
+  public burgerAnimation: boolean = false;
 
-  constructor(private ref: ChangeDetectorRef) {}
+  constructor(private ref: ChangeDetectorRef, public router: Router) {}
 
   ngOnInit(): void {}
 
   public burgerClick(): void {
-    this.mobileVisible = !this.mobileVisible;
-    this.ref.detectChanges();
+    if (this.mobileVisible) {
+      this.mobileCloseAnimation = true;
+      setTimeout(() => {
+        this.mobileVisible = false;
+        this.ref.detectChanges();
+      }, 1000);
+    } else {
+      this.mobileCloseAnimation = false;
+      this.mobileVisible = true;
+      this.ref.detectChanges();
+    }
+    this.burgerAnimation = !this.burgerAnimation;
   }
 
   public mobileLinkClick(): void {
@@ -31,9 +44,14 @@ export class AppNavComponent implements OnInit {
 
   @HostListener('window:resize', [])
   hideMobileMenu() {
-    if (window.innerWidth >= 500) {
+    if (window.innerWidth >= 700) {
       this.mobileVisible = false;
+      this.burgerAnimation = false;
       this.ref.detectChanges();
     }
+  }
+
+  shouldShow() {
+    return this.router.url.slice(0, 6) !== '/auth/';
   }
 }

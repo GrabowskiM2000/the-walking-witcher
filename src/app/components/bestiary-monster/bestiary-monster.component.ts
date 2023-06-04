@@ -22,8 +22,14 @@ export class BestiaryMonsterComponent implements OnInit {
     dmg: 2,
     terrain: 'Lasy',
     lvl: 1,
+<<<<<<< HEAD
     money: '2-3',
     skills: [],
+=======
+    moneyMin: 2,
+    moneyMax: 3,
+    skills: 'none',
+>>>>>>> aaf4597408de77b80732f611ff71587767a0c6cf
     speed: 8,
     luck: 0,
     armor: 0,
@@ -165,7 +171,7 @@ export class BestiaryMonsterComponent implements OnInit {
     }
   }
 
-  public infoIconClick(i: number): void {
+  public showMonsterInfo(i: number): void {
     this.monsterModalVisible = true;
     this.modalMonster = this.monstersByLvl[i][this.monstersByLvlIndex[i]];
     this.modalMonsterSkills =

@@ -1,0 +1,102 @@
+ul{
+  list-style: none;
+  width: 100%;
+  max-height: 1100px;
+  overflow-y: scroll;
+  padding-top: 1rem;
+  
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  li{
+    height: 50px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .name{
+      width: 100%;
+      overflow: hidden;
+      margin-right: 2rem;
+
+      h4{
+        font-size: 2.6rem;
+        font-weight: lighter;
+        text-align: center;
+      }
+    }
+
+    .progress{
+      width: 100%;
+      margin-right: 1rem;
+
+      p{
+        font-size: 2.6rem;
+        background-color: green;
+        max-width: 100px;
+        border-radius: 8px;
+        margin: auto 0;
+      }
+    }
+
+    .buttons{
+      display: flex;
+      justify-content: space-between;
+
+      .back, .done{
+        background-image: url(../../../assets/icons/back-arrow.png);
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        transition: .2s;
+        margin: 0 2rem;
+
+        &:hover{
+          scale: 1.1;
+        }
+      }
+
+      .done{
+        background-image: url(../../../assets/icons/check-mark.png);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  ul{
+    li{
+  
+      .name{
+        margin-right: 1rem;
+
+        h4{
+          font-size: 1.6rem;
+        }
+      }
+  
+      .progress{
+  
+        p{
+          font-size: 1.6rem;
+          padding: .5rem 0;
+        }
+      }
+  
+      .buttons{
+        .back, .done{
+          width: 24px;
+          height: 24px;
+        }
+  
+        .back, .done{
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
