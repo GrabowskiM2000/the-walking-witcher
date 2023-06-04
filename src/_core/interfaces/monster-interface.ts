@@ -6,7 +6,7 @@ export interface IMonster {
   terrain: string;
   lvl: number;
   money: string;
-  skills: string;
+  skills: any;
   speed: number;
   luck: number;
   armor: number;

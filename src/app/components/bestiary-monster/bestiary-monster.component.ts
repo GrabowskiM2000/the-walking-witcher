@@ -23,13 +23,14 @@ export class BestiaryMonsterComponent implements OnInit {
     terrain: 'Lasy',
     lvl: 1,
     money: '2-3',
-    skills: 'none',
+    skills: [],
     speed: 8,
     luck: 0,
     armor: 0,
     drop: 'czulka',
     dropAmount: 1,
   };
+  public modalMonsterSkills = [];
 
   constructor() {}
 
@@ -40,15 +41,16 @@ export class BestiaryMonsterComponent implements OnInit {
   // ------------------TESTY SYSTEMU WALKI---------------------------
 
   public player = {
-    name: 'Andrzej',
+    name: 'Ola',
     health: 3,
     dmg: 1,
-    speed: 1,
+    speed: 2,
     luck: 0,
     armor: 0,
   };
 
   public fight(monster: IMonster): void {
+    let fightMonster = monster;
     let attacks = 0;
     let target: any,
       dealer: any,
@@ -61,39 +63,63 @@ export class BestiaryMonsterComponent implements OnInit {
         armor: 0,
       };
 
-    if (this.player.speed <= monster.speed) {
-      target = this.player;
-      dealer = monster;
-      attacks = Math.floor((dealer.speed - target.speed) / 2);
-      if (attacks === 0) {
-        attacks = 1;
-      }
-    } else if (this.player.speed > monster.speed) {
-      target = monster;
-      dealer = this.player;
-      attacks = Math.floor((dealer.speed - target.speed) / 2);
-      if (attacks === 0) {
-        attacks = 1;
-      }
-    }
+    const healthRegeneration = (target: IMonster) => {
+      const regen = target.skills.filter((obj: any) => {
+        return obj.name === 'Regeneracja';
+      });
 
-    console.log(
-      `Pierwszy atakuje: ${dealer.name} (${dealer.speed} / ${target.speed})`
-    );
+      target.health += regen.value;
+      console.log(`${target} uleczył się o ${regen.value}!`);
+    };
+
+    const checkFirstAttack = () => {
+      if (this.player.speed <= fightMonster.speed) {
+        target = this.player;
+        dealer = fightMonster;
+        attacks = Math.floor((dealer.speed - target.speed) / 2) + 1;
+        // console.log(Math.floor((dealer.speed - target.speed) / 2) + 1);
+        if (attacks === 0) {
+          attacks = 1;
+        }
+      } else if (this.player.speed > fightMonster.speed) {
+        target = fightMonster;
+        dealer = this.player;
+        attacks = Math.floor((dealer.speed - target.speed) / 2) + 1;
+        // console.log(Math.floor((dealer.speed - target.speed) / 2) + 1);
+        if (attacks === 0) {
+          attacks = 1;
+        }
+      }
+
+      console.log(
+        `Pierwszy atakuje: ${dealer.name} (Stosunek szybkości: ${dealer.speed} / ${target.speed})`
+      );
+    };
 
     const attack = () => {
+      console.log(`fightMonster = ${fightMonster.health}`);
+      console.log(`this.modalMonster = ${this.modalMonster.health}`);
+      attacks = Math.floor((dealer.speed - target.speed) / 2) + 1;
+      if (attacks <= 0) {
+        attacks = 1;
+      }
+
       console.log(`ilość ataków: ${attacks}`);
 
       for (let i = 1; i <= attacks; i++) {
         if (dealer.luck > 0 && dealer.luck * 10 > Math.random() * 100) {
-          target.health -= (dealer.dmg - target.armor) * 2;
+          if (dealer.dmg - target.armor > 0) {
+            target.health -= (dealer.dmg - target.armor) * 2;
+          }
           console.log(
             `${dealer.name} trafia krytycznie i zadaje ${
               (dealer.dmg - target.armor) * 2
             } obrażeń ${target.name} zostało ${target.health} życia`
           );
         } else {
-          target.health -= dealer.dmg - target.armor;
+          if (dealer.dmg - target.armor > 0) {
+            target.health -= dealer.dmg - target.armor;
+          }
           console.log(
             `${dealer.name} zadaje ${dealer.dmg - target.armor} obrażeń ${
               target.name
@@ -103,19 +129,20 @@ export class BestiaryMonsterComponent implements OnInit {
 
         if (target.health <= 0) {
           winner = dealer;
-          console.log(`Wygrywa: ${dealer.name}`);
-          return winner;
+          console.log(`Wygrywa: ${dealer.name} zapas życia: ${dealer.health}`);
+          this.player.health = 3;
+          throw winner;
         }
 
         if (i === attacks) {
           attacks = 1;
           [target, dealer] = [dealer, target];
-          console.log(`Kolej ataku: ${dealer.name}`);
+          // console.log(`Kolej ataku: ${dealer.name}`);
           attack();
         }
       }
     };
-
+    checkFirstAttack();
     attack();
   }
 
@@ -141,6 +168,8 @@ export class BestiaryMonsterComponent implements OnInit {
   public infoIconClick(i: number): void {
     this.monsterModalVisible = true;
     this.modalMonster = this.monstersByLvl[i][this.monstersByLvlIndex[i]];
+    this.modalMonsterSkills =
+      this.monstersByLvl[i][this.monstersByLvlIndex[i]].skills[0].name;
     this.fight(this.modalMonster);
   }
 

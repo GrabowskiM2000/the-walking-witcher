@@ -7,8 +7,41 @@
 </div>
 
 <div class="content-container">
-  <div class="global-content-box character-box">
-    <p class="character-name">Andrzej</p>
-    <img class="character-background-image" src="assets/images/witcher-character.png">
+  <div class="character global-content-box">
+    <h2>Andrzej</h2>
+    <div class="character-container">
+      <div class="character-container-stats">
+        <div class="character-container-stats-up">
+          <p class="character-container-stats-up-description"></p>
+          <p class="character-container-stats-up-description">Pragenie: <span [ngClass]="{'red-text': false}">5 / 5</span></p>
+          <p class="character-container-stats-up-description">Głód: <span [ngClass]="{'red-text': true}">5 / 7</span></p>
+        </div>
+        <div class="character-container-stats-down">
+            <p class="character-container-stats-down-description">Obrażenia: <span [ngClass]="{'green-text': true}">2</span></p>
+            <p class="character-container-stats-down-description">Szybkość: <span [ngClass]="{'yellow-text': true}">1</span></p>
+            <p class="character-container-stats-down-description">Szczęście: <span [ngClass]="{'yellow-text': false}">1</span></p>
+            <p class="character-container-stats-down-description">Pancerz: <span [ngClass]="{'yellow-text': false}">1</span></p>
+            <p class="character-container-stats-down-description">Przebicie: <span [ngClass]="{'yellow-text': false}">1</span></p>
+        </div>
+      </div>
+      <img class="character-container-image" src="assets/images/witcher-character.png">
+    </div>
+    <div class="character-effects">
+      <div class="character-effects-box">
+        <p>Trucizna</p>
+        <img src="assets/icons/heart.png">
+        <p>-2hp / dzień</p>
+      </div>
+      <div class="character-effects-box">
+        <p>Trucizna</p>
+        <img src="assets/icons/heart.png">
+        <p>-2hp / dzień</p>
+      </div>
+      <div class="character-effects-box">
+        <p>Trucizna</p>
+        <img src="assets/icons/heart.png">
+        <p>-2hp / dzień</p>
+      </div>
+    </div>
   </div>
 </div>
