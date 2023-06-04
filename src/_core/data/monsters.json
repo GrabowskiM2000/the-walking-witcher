@@ -172,7 +172,7 @@
   {
     "img": "assets/images/ghul.png",
     "name": "Ghul",
-    "health": 2,
+    "health": 3,
     "dmg": 1,
     "terrain": "Zaludnione",
     "lvl": 1,
@@ -257,7 +257,7 @@
   {
     "img": "assets/images/alghul.png",
     "name": "Alghul",
-    "health": 4,
+    "health": 5,
     "dmg": 1,
     "terrain": "Zaludnione",
     "lvl": 1,
@@ -512,8 +512,8 @@
   {
     "img": "assets/images/harpia.png",
     "name": "Harpia",
-    "health": 2,
-    "dmg": 1,
+    "health": 5,
+    "dmg": 2,
     "terrain": "Obszary wysokie",
     "lvl": 1,
     "money": "2-3",
