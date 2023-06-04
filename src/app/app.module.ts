@@ -16,6 +16,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BoardComponent } from './pages/board/board.component';
 import { BestiaryMonsterComponent } from './components/bestiary-monster/bestiary-monster.component';
 import { LocationsEnviromentComponent } from './components/locations-enviroment/locations-enviroment.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { InputComponent } from './components/input/input.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
+import { TrackerComponent } from './pages/tracker/tracker.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +37,14 @@ import { LocationsEnviromentComponent } from './components/locations-enviroment/
     BoardComponent,
     BestiaryMonsterComponent,
     LocationsEnviromentComponent,
+    LoginComponent,
+    InputComponent,
+    RegisterComponent,
+    ForgotPasswordComponent,
+    TrackerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  exports: [AppNavComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

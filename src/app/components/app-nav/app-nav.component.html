@@ -1,25 +1,29 @@
-<div class="container">
+<div class="container" *ngIf="shouldShow()">
 
   <div class="container-box desktop">
     <a routerLink="" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }">strona główna</a>
     <a routerLink="board" routerLinkActive="active">tablica</a>
     <a routerLink="character" routerLinkActive="active">postać</a>
+    <a routerLink="tracker" routerLinkActive="active">tracker</a>
     <a routerLink="lacations" routerLinkActive="active">lokacje</a>
     <a routerLink="bestiary" routerLinkActive="active">bestiariusz</a>
     <a routerLink="instruction" routerLinkActive="active">instrukcja</a>
+    <a class="container-box-login" routerLink="auth">login</a>
   </div>
 
-  <div class="burger" (click)="burgerClick()" [ngClass]="{'burger-after-click':mobileVisible}">
+  <div class="burger" (click)="burgerClick()" [ngClass]="{'burger-after-click': burgerAnimation}">
     <div></div>
   </div>
 
-  <div class="mobile-menu" *ngIf="mobileVisible">
+  <div class="mobile-menu" *ngIf="mobileVisible" [ngClass]="{'mobile-menu-disappear':mobileCloseAnimation}">
     <a routerLink="" routerLinkActive="active" (click)="mobileLinkClick()"  [routerLinkActiveOptions]="{ exact: true }">strona główna</a>
     <a routerLink="board" routerLinkActive="active" (click)="mobileLinkClick()">tablica</a>
     <a routerLink="character" routerLinkActive="active" (click)="mobileLinkClick()">postać</a>
+    <a routerLink="tracker" routerLinkActive="active" (click)="mobileLinkClick()">tracker</a>
     <a routerLink="lacations" routerLinkActive="active" (click)="mobileLinkClick()">lokacje</a>
     <a routerLink="bestiary" routerLinkActive="active" (click)="mobileLinkClick()">bestiariusz</a>
     <a routerLink="instruction" routerLinkActive="active" (click)="mobileLinkClick()">instrukcja</a>
+    <a routerLink="auth" routerLinkActive="active" (click)="mobileLinkClick()">login</a>
   </div>
 
 </div>

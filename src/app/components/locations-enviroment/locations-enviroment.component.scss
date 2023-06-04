@@ -27,20 +27,15 @@
       max-width: 16px;
       max-height: 16px;
     }
-    &-icons{
-      display: flex;
-      justify-content: space-between;
-      width: 30%;
-      max-width: 8rem;
-      img{
-        cursor: pointer;
-        position: relative; 
-        transition: .2s ease;
-        &:hover{
-          scale: 1.1;
-        }
+    img{
+      cursor: pointer;
+      position: relative; 
+      transition: .2s ease;
+      &:hover{
+        scale: 1.1;
       }
     }
+    
   }
   ul{
     list-style: none;
@@ -51,6 +46,10 @@
       font-size: 1.2rem;
     }
   }
+}
+
+.scroll-disable{
+  overflow-y: hidden;
 }
 
 @keyframes modal-appears {

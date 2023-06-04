@@ -7,9 +7,10 @@
       <div class="monster-dots" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'big-dot': monster === monstersByLvl[i][monstersByLvlIndex[i]]}"></div>
     </div>
 
-    <img class="info-icon" src="assets/icons/info.png" (click)="infoIconClick(i)">
+    <img class="info-icon" src="assets/icons/angle-right.png" (click)="nextMonster(i)" *ngIf="monstersByLvl[i].length > 1">
     
-    <div class="monster-gallery" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'hide-if-empty': monster !== monstersByLvl[i][monstersByLvlIndex[i]]}" (click)="nextMonster(i)">
+    <div class="monster-gallery" *ngFor="let monster of monstersByLvl[i]" [ngClass]="{'hide-if-empty': monster !== monstersByLvl[i][monstersByLvlIndex[i]]}"
+    (click)="showMonsterInfo(i)">
       <img [src]="monster.img" *ngIf="monster === monstersByLvl[i][monstersByLvlIndex[i]]">
       <p>{{monster.name}}</p>
     </div>

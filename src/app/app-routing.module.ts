@@ -6,14 +6,21 @@ import { CharacterComponent } from './pages/character/character.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { InstructionComponent } from './pages/instruction/instruction.component';
 import { BoardComponent } from './pages/board/board.component';
+import { TrackerComponent } from './pages/tracker/tracker.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'board', component: BoardComponent },
   { path: 'bestiary', component: BestiaryComponent },
   { path: 'character', component: CharacterComponent },
+  { path: 'tracker', component: TrackerComponent },
   { path: 'lacations', component: LocationsComponent },
   { path: 'instruction', component: InstructionComponent },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({
