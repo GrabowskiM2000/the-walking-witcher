@@ -1,15 +1,40 @@
-
-//global-content-box
-
 .global-content-box{
+  h1,h3,i,img, .main-page-content-left, .main-page-content-right{
+    margin-bottom: 2rem;
+  }
   h1{
-    margin-bottom: 20px;
     font-weight:lighter;
   }
-  img{
-    width: 100%;
-    max-width: 256px;
-    border-radius: 16px;
-    margin-bottom: 20px;
+  i{
+    font-size: 1.6rem;
+  }
+  .main-page-sign{
+    margin-bottom: 4rem;
+  }
+  .main-page-content-left, .main-page-content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+      font-size: 1.6rem;
+      text-align: left;
+      max-width: 50%;
+      margin-left: 2rem;
+    }
+    img{
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      border: black solid 1px;
+      aspect-ratio: 2/1.2;
+    }
+  }
+  
+  .main-page-content-right{
+    p{
+      text-align: right;
+      margin-left: 0;
+      margin-right: 2rem;
+    }
   }
 }

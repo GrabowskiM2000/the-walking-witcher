@@ -1,4 +1,8 @@
 <div class="input">
-  <input placeholder="{{placeholder}}" type="{{type}}">  
+  <input 
+    placeholder="{{placeholder}}" 
+    [formControl]="formControlNameValue"
+    type="{{inputType ? 'text' : type}}">
   <span class="label">{{label}}</span>
+  <span class="errorHolder" *ngIf="(error$ | async) as error">{{ error }}</span>
 </div>

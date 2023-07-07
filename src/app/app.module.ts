@@ -21,6 +21,7 @@ import { InputComponent } from './components/input/input.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
 import { TrackerComponent } from './pages/tracker/tracker.component';
+import { InputModule } from './components/input/input.module';
 
 @NgModule({
   declarations: [
@@ -38,12 +39,11 @@ import { TrackerComponent } from './pages/tracker/tracker.component';
     BestiaryMonsterComponent,
     LocationsEnviromentComponent,
     LoginComponent,
-    InputComponent,
     RegisterComponent,
     ForgotPasswordComponent,
     TrackerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, InputModule],
   exports: [AppNavComponent],
   providers: [],
   bootstrap: [AppComponent],

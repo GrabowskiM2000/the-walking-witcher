@@ -7,45 +7,51 @@
     align-items: center;
     width: 100%;
     margin-bottom: 2rem;
+
     &-image{
-      width: 50vw;
-      max-width: 35rem;
-      // background-color: red;
+      width: 60%;
     }
+
     &-stats{
-      // background-color: blue;
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       &-up, &-down{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding-right: 2rem;
-          &-description{
-            white-space: nowrap;
-            margin-bottom: 3rem;
-            text-align: end;
-            font-size: 1.6rem;
-            // font-weight: bolder;
-            span{
-              font-weight: bold;
-              font-size: 1.8rem;
-            }
+
+        &-description{
+          white-space: nowrap;
+          margin-bottom: 3rem;
+          text-align: end;
+          font-size: 1.6rem;
+
+          span{
+            font-weight: bold;
+            font-size: 1.8rem;
           }
-          .red-text{
-            color: red;
-          }
-          .yellow-text{
-            color: yellow;
-          }
-          .green-text{
-            color: rgb(15, 165, 15);
-          }
+        }
+
+        .red-text{
+          color: red;
+        }
+
+        .yellow-text{
+          color: yellow;
+        }
+        
+        .green-text{
+          color: rgb(15, 165, 15);
+        }
       }
     }
   }
+
   &-effects{
     background-color: rgba($color: #fff, $alpha: .1);
     display: flex;
@@ -53,6 +59,7 @@
     height: 10rem;
     border-radius: 8px;
     padding: 5px 10px;
+
     &-box{
       background-color: rgba($color: red, $alpha: .4);
       display: flex;
@@ -64,6 +71,7 @@
       border-radius: 8px;
       margin-right: 10px;
       padding-top: 4px;
+
       img{
         max-width: 32px;
       }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
+import {
+  validateAllFormFields,
+  email,
+} from '../../../../_core/validators/validators';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +11,14 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
+
+  public loginForm = this.fb.group({
+    email: [null, [Validators.required, email]],
+    password: [null, [Validators.required]],
+  });
+
+  //BRAKUJE TUTAJ SUBMIT_FORM()
 }

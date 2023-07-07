@@ -12,23 +12,8 @@
       <p>Lvl 4</p>
       <p>Lvl 5</p>
     </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Lasy'" [image]="'assets/icons/forest.png'"></app-bestiary-monster>
-    </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Polany'" [image]="'assets/icons/grass.png'"></app-bestiary-monster>
-    </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Zaludnione'" [image]="'assets/icons/hut.png'"></app-bestiary-monster>
-    </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Obszary podmokłe'" [image]="'assets/icons/drop.png'"></app-bestiary-monster>
-    </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Obszary wysokie'" [image]="'assets/icons/mountain.png'"></app-bestiary-monster>
-    </div>
-    <div class="w-100">
-      <app-bestiary-monster [enviroment]="'Ruiny'" [image]="'assets/icons/ruin.png'"></app-bestiary-monster>
+    <div class="w-100" *ngFor="let i = index of monsterRows">
+      <app-bestiary-monster [enviroment]="monsterRows[i].enviroment" [image]="monsterRows[i].image"></app-bestiary-monster>
     </div>
   </div>
 </div>

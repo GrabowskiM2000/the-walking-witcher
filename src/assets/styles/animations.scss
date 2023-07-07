@@ -1,0 +1,31 @@
+.image-in-text-animation {
+  font-size: 8vw;
+  line-height: 8vw;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  background: url(../images/asd.jpg);
+  background-size: 50%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 5s ease forwards;
+  animation-iteration-count: infinite;
+  font-size: 5rem;
+  letter-spacing: 6px;
+  cursor: pointer;
+  font-family: "Vampire";
+}
+
+@keyframes zoomout {
+  0% {
+    background-size: 50%;
+  }
+  50% {
+    background-size: 25%;
+  }
+  100% {
+    background-size: 50%;
+  }
+}

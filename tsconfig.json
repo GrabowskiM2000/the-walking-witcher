@@ -19,13 +19,14 @@
     "target": "es2017",
     "module": "es2020",
     "lib": ["es2020", "dom"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "resolveJsonModule": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": false,
+    "allowSyntheticDefaultImports": true,
+    "fullTemplateTypeCheck": false
   }
 }

@@ -10,14 +10,10 @@
   <div class="global-content-box">
     <div class="locations">
       <div class="locations-box">
-        <app-locations-enviroment [enviroment]="'Lasy'" [image]="'assets/icons/forest.png'"></app-locations-enviroment>
-        <app-locations-enviroment [enviroment]="'Polany'" [image]="'assets/icons/grass.png'"></app-locations-enviroment>
-        <app-locations-enviroment [enviroment]="'Zaludnione'" [image]="'assets/icons/hut.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="locations[i].enviroment" [image]="locations[i].image" *ngFor="let i = index, let location of locations | slice:1:locations.length/2+1"></app-locations-enviroment>
       </div>
       <div class="locations-box">
-        <app-locations-enviroment [enviroment]="'Bagna'" [image]="'assets/icons/drop.png'"></app-locations-enviroment>
-        <app-locations-enviroment [enviroment]="'Wyżyny'" [image]="'assets/icons/mountain.png'"></app-locations-enviroment>
-        <app-locations-enviroment [enviroment]="'Ruiny'" [image]="'assets/icons/ruin.png'"></app-locations-enviroment>
+        <app-locations-enviroment [enviroment]="locations[i].enviroment" [image]="locations[i].image" *ngFor="let i = index, let location of locations | slice:locations.length/2:locations.length+1"></app-locations-enviroment>
       </div>
     </div>
   </div>
