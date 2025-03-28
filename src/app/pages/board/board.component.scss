@@ -1,4 +1,13 @@
-.monster-cards{
+.reset-button {
+  position: absolute;
+  top: 10px;
+  right: 34px;
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+}
+
+.monster-cards {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -7,13 +16,13 @@
 }
 
 @media screen and (max-width: 580px) {
-  .content-container{
-    .monster-cards{
+  .content-container {
+    .monster-cards {
       justify-content: center;
       flex-direction: column;
       align-items: center;
     }
-    app-card{
+    app-card {
       margin-bottom: 10px;
     }
   }

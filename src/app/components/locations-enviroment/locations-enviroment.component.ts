@@ -39,7 +39,7 @@ export class LocationsEnviromentComponent implements OnInit {
   public addLocation(): void {
     this.addModalVisible = true;
     this.addModalHides = false;
-    this.locationsEnviroment.scrollTop = 0;
+    this.locationsEnviroment.scrollTop = 0; //Działa zawsze na pierwszy kafelek czyli na LASY, nawet jak dodajesz coś na inne to lasy idą do góry. DO POPRAWY
   }
 
   public addLocationClose(): void {

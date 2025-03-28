@@ -19,6 +19,7 @@ export class CardComponent implements OnInit {
   public currentMonsters: IMonster[] = [];
   public shuffled = false;
   public monsterMoney = 0;
+  public test = '101deg';
 
   constructor(private ref: ChangeDetectorRef) {}
 

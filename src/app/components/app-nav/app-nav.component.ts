@@ -52,6 +52,6 @@ export class AppNavComponent implements OnInit {
   }
 
   shouldShow() {
-    return this.router.url.slice(0, 6) !== '/auth/';
+    return this.router.url.slice(0, 6);
   }
 }
