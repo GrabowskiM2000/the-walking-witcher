@@ -1,6 +1,6 @@
 // TEST //
 
-.test{
+.test {
   background-color: red !important;
   min-height: 1000px !important;
 }
@@ -11,38 +11,38 @@
 @import url(assets/styles/animations.scss);
 
 @font-face {
-  font-family: 'Vampire';
-  src: url('../src/assets/fonts/Vampire Wars.ttf');
+  font-family: "Vampire";
+  src: url("../src/assets/fonts/Vampire Wars.ttf");
 }
 
 // RESET //
-html{
+html {
   font-size: 10px;
 }
 
-body{
+body {
   font-size: 1.6rem;
-  font-family: "Semplicita Pro",'Open Sans',Arial,Helvetica,sans-serif;
-
+  font-family: "Semplicita Pro", "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-a{
+a {
   color: var(--black);
   text-decoration: none;
-  -webkit-user-drag: none ;
+  -webkit-user-drag: none;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.content-container{
+.content-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,67 +50,67 @@ a{
   width: 100%;
 }
 
-.global-content-box{
+.global-content-box {
   display: flex;
   align-items: center;
   flex-direction: column;
   color: var(--white);
-  background-color: rgba(0,0,0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   padding: 2rem;
   width: 96%;
   margin-bottom: 2rem;
 
-  h2{
+  h2 {
     margin-bottom: 1rem;
     width: 100%;
     text-align: center;
   }
-  p{
+  p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     width: 100%;
     text-align: center;
   }
 }
-.w-100{
+.w-100 {
   width: 100%;
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-between{
+.flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flex-center-column{
+.flex-center-column {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.text-aligin-left{
+.text-aligin-left {
   text-align: left;
 }
 
-.text-aligin-right{
+.text-aligin-right {
   text-align: right;
 }
 
-.text-aligin-center{
+.text-aligin-center {
   text-align: center;
 }
 
 @media screen and (max-width: 580px) {
-  .content-container{
-    .global-content-box{
+  .content-container {
+    .global-content-box {
       padding: 1rem;
     }
   }
